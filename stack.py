@@ -90,4 +90,4 @@ class Test(unittest.TestCase):
         self.assertEqual(stack.length(),4)
 
 if __name__=='__main__':
-    unittest()
+    unittest.main()
