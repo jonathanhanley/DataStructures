@@ -87,14 +87,12 @@ class BinHeap(object):
                     break
 
                 if self._array[left_child_index] < self._array[right_child_index]:
-                    print('LEFT')
                     if self._array[left_child_index]<self._array[item_index]:
                         self._array[left_child_index],self._array[item_index]=self._array[item_index],self._array[left_child_index]
                         item_index=left_child_index
                     else:
                         break
                 else:
-                    print('RIGHT')
                     if self._array[right_child_index]<self._array[item_index]:
                         self._array[right_child_index],self._array[item_index]=self._array[item_index],self._array[right_child_index]
                         item_index=right_child_index
@@ -105,6 +103,18 @@ class BinHeap(object):
                 right_child_index = 2*item_index+ 2
             return min_item
 
+
+    def min(self):
+        '''
+        :return: the smallest item in the heap
+        '''
+        return self._array[0]
+
+    def length(self):
+        '''
+        :return: the length of the heap
+        '''
+        return len(self._array)
 
 
 
